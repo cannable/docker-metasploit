@@ -2,9 +2,9 @@
 
 # If you mounted a volume for Postgres (which is the default),
 # we need to fix the lack of data files (whoops)
-if [ ! -d /var/lib/postgresql/10 ]; then
-	pg_dropcluster 10 main
-	pg_createcluster 10 main
+if [ ! -d /var/lib/postgresql/14 ]; then
+	pg_dropcluster 14 main
+	pg_createcluster 14 main
 fi
 
 service postgresql start

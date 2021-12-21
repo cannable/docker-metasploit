@@ -1,4 +1,4 @@
-FROM kalilinux/kali-linux-docker
+FROM kalilinux/kali-rolling
 ENV NAME msf
 ENV MSF_UPDATE=1
 WORKDIR /
