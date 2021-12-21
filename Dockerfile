@@ -1,6 +1,5 @@
 FROM kalilinux/kali-rolling
 ENV NAME msf
-ENV MSF_UPDATE=1
 WORKDIR /
 VOLUME ["/var/lib/postgresql"]
 VOLUME ["/root"]

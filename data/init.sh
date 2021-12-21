@@ -9,12 +9,11 @@ fi
 
 service postgresql start
 
-if [ $MSF_UPDATE ]; then
-    # Make sure the framework is up to date
-    apt-get update
-    apt-get -y install metasploit-framework nmap
-    apt-get clean
-fi
+# Install Metasploit nightly build
+
+curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && \
+    chmod 755 msfinstall && \
+    ./msfinstall
 
 # If there is no DB schema, load it
 msfdb init
