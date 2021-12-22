@@ -172,6 +172,7 @@ apt-get -y install \
     manpages-dev \
     media-types \
     nasm \
+    net-tools \
     netbase \
     nmap \
     nmap-common \
